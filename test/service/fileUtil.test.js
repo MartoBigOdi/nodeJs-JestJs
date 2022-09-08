@@ -14,7 +14,7 @@ test('el metodo leer deberia retornar el contenido del archivo', () => {
         const peliculaProceso = new PeliculaProceso(lista)
         const fileUtil = new FileUtil();
         const resultados = peliculaProceso.procesar();
-        fileUtil.escribir(resultados, './resource/resultadoPeliculas.json')
+        fileUtil.escribir(resultados, './resource/resultadoPeliculasTest.json')
         expect(resultados).toEqual({resultado: {cantidadPeliculas: peliculaProceso.datosPelicula(), cantidadPersonajes: peliculaProceso.cantReducePersonajes()}});
     } catch(e) {
         console.log(e);
