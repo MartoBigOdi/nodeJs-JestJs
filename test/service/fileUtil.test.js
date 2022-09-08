@@ -1,7 +1,6 @@
 import FileUtil from '../../src/service/FileUtil.js'
 import PeliculaProceso from '../../src/service/PeliculaProceso'
 
-
 //Test case que valida que escriba el json correctamente 
 test('el metodo leer deberia retornar el contenido del archivo', () => {
     const lista = [
