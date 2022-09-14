@@ -11,7 +11,7 @@ class PeliculaProceso {
         return this.listaPeliculas.length;
     }
 
-    //Funcionando Ok
+    //Funcionando Ok, devuelve cantidad de personajes total
     cantTotalPersonajes(){
         let contadorPersonajes = 0;
         this.listaPeliculas.forEach(peli => {
@@ -24,12 +24,12 @@ class PeliculaProceso {
         return contadorPersonajes;
     }
 
-    //Esta Ok funcionando
+    //Esta Ok funcionando, devuelve cantidad de personajes total
     cantReducePersonajes(){
         return this.listaPeliculas.reduce((sum, pelicula) => sum + (new Pelicula(pelicula.nombre, pelicula.personajes).numeroDePersonajes()), 0)
     }
 
-    //Esta Ok funcionando
+    //Esta Ok funcionando, el objeto resultado
     procesar(){
         return {resultado: {cantidadPeliculas: this.datosPelicula(), cantidadPersonajes: this.cantReducePersonajes()}}
     }

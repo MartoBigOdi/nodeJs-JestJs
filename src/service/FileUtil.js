@@ -5,7 +5,7 @@ class FileUtil  {
     constructor(archivo) {
         this.archivo = archivo;
     }
-
+    //Lee el archivo Json
     leer() {
         try {
             return fs.readFileSync(this.archivo,'utf-8');
@@ -13,7 +13,7 @@ class FileUtil  {
             throw 'No se encontro el archivo para leer';
         }  
     }
-
+    //Escribimos un Json con el objeto resultado
     escribir(data, path){
         try{
             let json = JSON.stringify(data, null, 4);
